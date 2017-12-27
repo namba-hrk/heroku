@@ -1,0 +1,15 @@
+{
+  "name": "amp-pwa-test",
+  "version": "1.0.0",
+  "description": "amp-pwa-test",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/amp-pwa-test.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
