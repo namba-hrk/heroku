@@ -1,15 +1,11 @@
 {
-  "name": "amp-pwa-test",
-  "version": "1.0.0",
-  "description": "amp-pwa-test",
-  "main": "index.html",
+  "name": "AWAKE",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nf start"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://git.heroku.com/amp-pwa-test.git"
-  },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "serve": "~2.1.2",
+    "foreman": "~2.0.0"
+  }
 }
