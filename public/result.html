@@ -199,6 +199,14 @@ amp-selector [option][selected]{outline:none;}
 .c-footer-link__copyright{position:absolute;z-index:1;bottom:12px;left:0;width:100%;font-size:10px;font-weight:400;text-align:center;color:#39397a;}
 .c-footer-link::after, .c-footer-link::before{content:'';position:absolute;}
 .c-footer-link::after{left:0;bottom:0;width:100%;height:27px;background:#fff;}
+@media screen and (min-width: 600px){
+body{width:calc(100vw - 280px);}
+#c-fixed-nav{width:calc(100vw - 280px);}
+.c-header .c-header__nav-list{display:none;}
+#c-fixed-sidemenu{display:block;position:fixed;top:0;right:0;width:280px;border-left:2px solid #d2dcf9;box-sizing:border-box;}
+.tabButton[selected] a:before{border-left-width:calc((100vw - 280px) * .236);border-right-width:calc((100vw - 280px) * .236);}
+.tabButton[selected] a:after{border-left-width:calc((100vw - 280px) * .22);border-right-width:calc((100vw - 280px) * .22);}
+}
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
