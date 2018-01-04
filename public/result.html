@@ -50,10 +50,10 @@ body{font-family:sans-serif;background:#fff;color:#333;font-size:14px;text-size-
 .c-flat-button--has-arrow{position:relative;}
 .c-flat-button{display:block;padding:0;box-sizing:border-box;border-radius:5px;border:none;-webkit-appearance:none;}
 .c-f-button__text-item{display:block;height:36px;margin-right:10px;margin-left:10px;line-height:36px;font-size:15px;text-align:center;font-weight:700;}
-.c-flat-button--red.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_red_right.png) right center no-repeat;background-size:7px auto;}
-.c-flat-button--blue.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_blue_right.png) right center no-repeat;background-size:7px auto;}
-.c-flat-button--pink.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_pink_right.png) right center no-repeat;background-size:7px auto;}
-.c-flat-button--yellow.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_yellow_right.png) right center no-repeat;background-size:7px auto;}
+.c-flat-button--red.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_red_right.png) right center no-repeat;background-size:7px auto;}
+.c-flat-button--blue.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_blue_right.png) right center no-repeat;background-size:7px auto;}
+.c-flat-button--pink.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_pink_right.png) right center no-repeat;background-size:7px auto;}
+.c-flat-button--yellow.c-flat-button--has-arrow .c-f-button__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_yellow_right.png) right center no-repeat;background-size:7px auto;}
 .c-flat-button--blue .c-f-button__text-item{color:#024b87;}
 .c-flat-button--red .c-f-button__text-item{color:#f0585a;}
 .c-flat-button--pink .c-f-button__text-item{color:#ea7d9f;}
@@ -67,25 +67,69 @@ a{text-decoration:none;}
 .c-header__logo__link-item{display:block;padding:15px 10px;}
 .c-header__nav{-webkit-box-flex:1;flex-grow:1;}
 .c-header__nav-list{display:flex;justify-content:flex-end;}
-.c-header__nav-list__list-item--howto, .c-header__nav-list__list-item--mypage, .c-header__nav-list__list-item--portal, .c-header__nav-list__list-item--wallet{background-repeat:no-repeat;background-position:center 11px;}
+.c-header__nav-list__list-item--search{width:50px;background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_header05.png);background-size:18px auto;background-repeat:no-repeat;background-position:center 8px;}
+.c-header__nav-list__list-item--sidemenu{width:50px;background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_header06.png);background-size:18px auto;background-repeat:no-repeat;background-position:center 8px;cursor:pointer;}
 .c-header__nav-list__link-item{display:block;box-sizing:border-box;height:48px;padding-top:32px;}
-.c-header__nav-list__text-item{display:block;text-align:center;font-size:10px;letter-spacing:-.3px;color:grey;}
-.c-header__nav-list__list-item--wallet{width:65px;background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_header01.png);background-size:15px auto;}
-.c-header__nav-list__list-item--howto{width:35px;background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_header02.png);background-size:13px auto;}
-.c-header__nav-list__list-item--mypage{width:55px;background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_header03.png);background-size:18px auto;}
-.c-header__nav-list__list-item--portal{width:80px;background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_header04.png);background-size:19px auto;}
+.c-header__nav-list__text-item{display:block;text-align:center;font-size:10px;letter-spacing:-.3px;color:grey;line-height:1;}
+#c-fixed-sidemenu{display:none;}
+amp-sidebar{background:#fff;width:280px;}
+.c-sidemenu__menus{height:100%;overflow:auto;}
+.c-sidemenu__close-button{position:absolute;top:0;right:280px;padding:10px;font-size:0;line-height:0;outline:0;z-index:9999999999;}
+#sidebar[aria-hidden="true"]+.c-sidemenu__close-button{display:none;}
+#sidebar[aria-hidden="false"]+.c-sidemenu__close-button{display:block;}
+.c-sidemenu-astro{background:#e1eaff;padding:15px;display:flex;}
+.c-sidemenu-summary{flex-basic:1;flex-shrink:0;width:110px;margin-right:5px;}
+.c-sidemenu-summary__img{position:relative;text-align:center;margin-top:10px;}
+.c-sidemenu-summary__img__rank{position:absolute;left:-5px;top:0;z-index:1;}
+.c-sidemenu-rating{-webkit-box-flex:1;flex:1;}
+.c-sidemenu-rating__row{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin-bottom:10px;}
+.c-sidemenu-rating__star{width:75px;height:12px;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_star_gray.png);background-size:15px 12px;}
+.c-sidemenu-rating__star__text-item{display:block;height:12px;text-indent:-999px;background-size:15px 12px;}
+.c-sidemenu-rating__star--num-1 .c-sidemenu-rating__star__text-item{width:15px;}
+.c-sidemenu-rating__star--num-2 .c-sidemenu-rating__star__text-item{width:30px;}
+.c-sidemenu-rating__star--num-3 .c-sidemenu-rating__star__text-item{width:45px;}
+.c-sidemenu-rating__star--num-4 .c-sidemenu-rating__star__text-item{width:60px;}
+.c-sidemenu-rating__star--personal .c-sidemenu-rating__star__text-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_star_red.png);}
+.c-sidemenu-rating__star--love .c-sidemenu-rating__star__text-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_star_pink.png);}
+.c-sidemenu-rating__star--gold .c-sidemenu-rating__star__text-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_star_yellow.png);}
+.c-sidemenu-rating__detail__link-item{display:inline-block;padding-right:10px;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_blue_right.png) right center no-repeat;background-size:7px auto;}
+.c-sidemenu-topnav{padding:10px 0;}
+.c-label-new, .c-sidemenu-topnav-list{text-align:center;}
+.c-sidemenu-topnav-list__list-item{display:inline-block;border:1px solid #ccc; border-radius:4px;margin:5px;width:115px;}
+.c-sidemenu__link-item--has-icon{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;height:40px;padding-left:10px;font-size:12px;}
+.c-sidemenu__link-item--has-icon::before{content:"";display:block;width:20px;height:20px;margin-right:8px;background-size:20px 20px;}
+.c-sidemenu-topnav-list__link-item--mypage::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_mypage.png);}
+.c-sidemenu-topnav-list__link-item--top::before{background-image:url(http://cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_top.png);}
+.c-sidemenu-topnav-list__text-item{font-weight:700;color:grey;}
+.c-sidemenu-link-list, .c-sidemenu-nav-list{border-top:1px solid #d2dcf9;}
+.c-sidemenu-link-list__list-item, .c-sidemenu-nav-list__list-item{border-bottom:1px solid #d2dcf9;}
+.c-sidemenu-nav-list__list-item{display:inline-block;width:50%;}
+.c-sidemenu-nav-list__list-item:nth-child(odd){margin-right:-1px;border-right:1px solid #d2dcf9;}
+.c-sidemenu__link-item--has-icon{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;height:40px;padding-left:10px;font-size:12px;}
+.c-sidemenu__link-item--has-icon::before{content:"";display:block;width:20px;height:20px;margin-right:8px;background-size:20px 20px;}
+.c-sidemenu-nav-list__link-item--list::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_list.png);}
+.c-sidemenu-nav-list__link-item--popular::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_popular.png);}
+.c-sidemenu-nav-list__link-item--new::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_new.png);}
+.c-sidemenu-nav-list__link-item--ranking::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_ranking.png);}
+.c-sidemenu-nav-list__link-item--astro::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_12seiza.png);}
+.c-sidemenu-nav-list__link-item--search::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_search.png);}
+.c-sidemenu-link-list__link-item--portal::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_portal.png);}
+.c-sidemenu-link-list__link-item--smartpass::before{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_smapass.png);}
+.c-sidemenu-word{padding:10px 5px;}
+.c-sidemenu-word__list-item{display:inline-block;margin:5px;}
+.c-sidemenu-word__text-item{display:inline-block;padding:10px;font-size:12px;background:#e1eaff;border-radius:3px;}
 .l-global-nav{background:#39397a;}
 .l-global-nav-list{display:flex;}
 .l-global-nav-list__list-item{width:25%;}
 .l-global-nav-list__link-item{display:block;height:45px;text-indent:-9999px;background-size:auto 100%;background-repeat:no-repeat;background-position:center center;}
-.l-global-nav-list__list-item--top .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_01_christmas_off.png);}
-.l-global-nav-list__list-item--astro .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_02_christmas_off.png);}
-.l-global-nav-list__list-item--ranking .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_03_christmas_off.png);}
-.l-global-nav-list__list-item--search .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_04_christmas_off.png);}
-.l-global-nav-list__list-item--top.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_01_christmas_on.png);}
-.l-global-nav-list__list-item--astro.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_02_christmas_on.png);}
-.l-global-nav-list__list-item--ranking.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_03_christmas_on.png);}
-.l-global-nav-list__list-item--search.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_04_christmas_on.png);}
+.l-global-nav-list__list-item--top .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_01_christmas_off.png);}
+.l-global-nav-list__list-item--astro .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_02_christmas_off.png);}
+.l-global-nav-list__list-item--ranking .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_03_christmas_off.png);}
+.l-global-nav-list__list-item--search .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_04_christmas_off.png);}
+.l-global-nav-list__list-item--top.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_01_christmas_on.png);}
+.l-global-nav-list__list-item--astro.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_02_christmas_on.png);}
+.l-global-nav-list__list-item--ranking.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_03_christmas_on.png);}
+.l-global-nav-list__list-item--search.l-global-nav-list__list-item--current .l-global-nav-list__link-item{background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_globalnav_04_christmas_on.png);}
 #c-fixed-nav{position:fixed;top:-45px;left:0;width:100%;z-index:999;}
 .c-section-heading{display:flex;-webkit-box-align:center;align-items:center;height:38px;padding:0 10px;position:relative;border-bottom:2px solid #d9ae00;box-sizing:border-box;}
 .c-section-heading__text-item{color:#001b5a;font-weight:700;font-size:16px;}
@@ -106,11 +150,11 @@ amp-selector [option][selected]{outline:none;}
 .tabContent{display:none;width:100%;order:1;}
 .tabButton[selected]+.tabContent{display:block;}
 .p-astro-container__section{padding-top:20px;border-top:2px solid #e0eafc;}
-.c-rating-star{width:110px;height:18px;background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_gray.png);background-size:22px auto;}
+.c-rating-star{width:110px;height:18px;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_gray.png);background-size:22px auto;}
 .c-rating-star__text-item{display:block;height:18px;text-indent:-9999px;}
-.c-rating-star--personal .c-rating-star__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_red.png);background-size:22px auto;}
-.c-rating-star--love .c-rating-star__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_pink.png);background-size:22px auto;}
-.c-rating-star--gold .c-rating-star__text-item{background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_yellow.png);background-size:22px auto;}
+.c-rating-star--personal .c-rating-star__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_red.png);background-size:22px auto;}
+.c-rating-star--love .c-rating-star__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_pink.png);background-size:22px auto;}
+.c-rating-star--gold .c-rating-star__text-item{background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_star_yellow.png);background-size:22px auto;}
 .c-rating-star--num-1 .c-rating-star__text-item{width:22px;}
 .c-rating-star--num-2 .c-rating-star__text-item{width:44px;}
 .c-rating-star--num-3 .c-rating-star__text-item{width:66px;}
@@ -120,8 +164,8 @@ amp-selector [option][selected]{outline:none;}
 .p-astro-sub-result__keyword{display:flex;width:100%;box-sizing:border-box;border-bottom:2px solid #e0eafc;}
 .p-astro-sub-result__title{display:block;width:86px;min-width:86px;padding:0 5px;box-sizing:border-box;border-right:2px solid #e0eafc;}
 .p-astro-sub-result__title__keyword, .p-astro-sub-result__title__luckycolor{display:block;padding-top:30px;color:#024b87;font-size:10px;font-weight:700;text-align:center;height:44px;}
-.p-astro-sub-result__title__keyword{box-sizing:border-box;background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_key.png) center 6px no-repeat;background-size:20px auto;}
-.p-astro-sub-result__title__luckycolor{box-sizing:border-box;background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/icon_palette.png) center 6px no-repeat;background-size:20px auto;}
+.p-astro-sub-result__title__keyword{box-sizing:border-box;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_key.png) center 6px no-repeat;background-size:20px auto;}
+.p-astro-sub-result__title__luckycolor{box-sizing:border-box;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_palette.png) center 6px no-repeat;background-size:20px auto;}
 .p-astro-sub-result__description{display:flex;-webkit-box-align:center;align-items:center;flex-grow:1;font-size:14px;color:#001b5a;}
 .p-astro-sub-result__description__text-item{display:block;padding:0 10px;width:100%;line-height:18px;}
 .p-share-button{text-align:right;}
@@ -138,7 +182,7 @@ amp-selector [option][selected]{outline:none;}
 .c-category-list__link-item{padding:3px;display:block;background:#e1eaff;}
 .c-category-list__text-item{height:30px;display:flex;align-items:center;justify-content:center;background:#e1eaff;border:1px solid #fff;font-size:13px;font-weight:700;border-radius:3px;}
 .ft-pagetop_return{width:auto;display:block;margin-bottom:0;position:relative;padding-right:10px;text-indent:-9999px;white-space:nowrap;height:78px;margin-top:30px;}
-.ft-pagetop_return .ft-pagetop_return_touch{width:55px;height:78px;background-image:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/btn_pagetop_christmas.png);background-size:55px auto;position:absolute;right:9px;top:0;}
+.ft-pagetop_return .ft-pagetop_return_touch{width:55px;height:78px;background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/btn_pagetop_christmas.png);background-size:55px auto;position:absolute;right:9px;top:0;}
 .c-footer-nav{padding:5px;background:#e0e0e0;}
 .c-footer-nav-list{background:#fff;}
 .c-footer-nav-list__list-item:nth-child(odd){border-right:1px solid #e0e0e0;}
@@ -147,7 +191,7 @@ amp-selector [option][selected]{outline:none;}
 .c-footer-nav-list__link-item{display:block;}
 .c-footer-link{position:relative;box-sizing:border-box;padding:16px 0 0;height:195px;text-align:left;background:#39397a;}
 .c-footer-link::after, .c-footer-link::before{content:'';position:absolute;}
-.c-footer-link::before{left:0;top:0;width:100%;height:100%;background:url(//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/bg_footer-link_christmas.png) center bottom no-repeat;background-size:auto 195px;}
+.c-footer-link::before{left:0;top:0;width:100%;height:100%;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/bg_footer-link_christmas.png) center bottom no-repeat;background-size:auto 195px;}
 .c-footer-link-list{position:relative;z-index:1;width:260px;margin:0 auto 25px;text-align:center;}
 .c-footer-link-list__list-item{display:inline-block;margin:0 5px 8px;}
 .c-footer-link-list__link-item{font-size:11px;}
@@ -158,43 +202,223 @@ amp-selector [option][selected]{outline:none;}
 </style>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 <!--<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>-->
 <script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script>
 <script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script>
 <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 </head>
 <body>
-<header id="topHeader" class="c-header">
-    <h1 class="c-header__logo">
-        <a href="http://local.sp.fortune.auone.jp" class="c-header__logo__link-item">
-          <amp-img class="u-va-bottom" src="//cdn.dev.vie.auone.jp/asset/ft-market/sp/img/common/logo.png" width="65" height="18"></amp-img>
-        </a>
-    </h1>
-    <div class="c-header__nav">
-        <ul class="c-header__nav-list">
-            <li class="c-header__nav-list__list-item c-header__nav-list__list-item--wallet">
-                <a href="https://id.auone.jp/point/info/" class="c-header__nav-list__link-item">
-                    <span class="c-header__nav-list__text-item">ポイント明細</span>
-                </a>
-            </li>
-            <li class="c-header__nav-list__list-item c-header__nav-list__list-item--howto">
-                <a href="http://local.sp.fortune.auone.jp/howto" class="c-header__nav-list__link-item">
-                    <span class="c-header__nav-list__text-item">使い方</span>
-                </a>
-            </li>
-            <li class="c-header__nav-list__list-item c-header__nav-list__list-item--mypage">
-                <a href="http://local.sp.fortune.auone.jp/mypage" class="c-header__nav-list__link-item">
-                    <span class="c-header__nav-list__text-item">マイページ</span>
-                </a>
-            </li>
-            <li class="c-header__nav-list__list-item c-header__nav-list__list-item--portal">
-                <a href="https://auone.jp" class="c-header__nav-list__link-item">
-                    <span class="c-header__nav-list__text-item">au Webポータル</span>
-                </a>
-            </li>
-        </ul>
+    <header id="topHeader"  class="c-header">
+        <h1 class="c-header__logo">
+            <a href="http://local.sp.fortune.auone.jp" class="c-header__logo__link-item">
+              <amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/logo.png" width="65" height="18" alt="au占い" class="u-va-bottom"></amp-img>
+            </a>
+        </h1>
+        <div class="c-header__nav">
+            <ul class="c-header__nav-list u-mrm">
+                <li class="c-header__nav-list__list-item c-header__nav-list__list-item--search">
+                    <a href="http://local.sp.fortune.auone.jp/search" class="c-header__nav-list__link-item">
+                        <span class="c-header__nav-list__text-item">検索</span>
+                    </a>
+                </li>
+                <li on="tap:sidebar.toggle" class="c-header__nav-list__list-item c-header__nav-list__list-item--sidemenu" role="button" tabindex="0">
+                    <a class="c-header__nav-list__link-item">
+                        <span class="c-header__nav-list__text-item">メニュー</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="c-sidemenu__menus">
+            <div>
+                <div class="c-sidemenu-astro">
+                    <div class="c-sidemenu-summary">
+                        <h3 class="u-fs-xxlarge u-fw-bold u-color-blue">てんびん座</h3>
+                        <p class="u-fs-small u-color-blue">9/23～10/23</p>
+                        <div class="c-sidemenu-summary__img">
+                            <amp-img class="c-sidemenu-summary__img__rank" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/astro_rank_1.png" width="38" height="49" alt="1位"></amp-img>
+                            <amp-img class="c-sidemenu-summary__img__astro" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/astro/hrs_07_libra.png" width="100" height="80" alt=""></amp-img>
+                        </div>
+                    </div>
+                    <div class="c-sidemenu-rating">
+                        <div class="c-sidemenu-rating__row">
+                            <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_personal.png" alt="総合運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                            <p class="c-sidemenu-rating__star c-sidemenu-rating__star--personal c-sidemenu-rating__star--num-5">
+                                <span class="c-sidemenu-rating__star__text-item">星5つ</span>
+                            </p>
+                        </div>
+                        <div class="c-sidemenu-rating__row u-flex-h u-flex-v--center">
+                            <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_love.png" alt="恋愛運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                            <p class="c-sidemenu-rating__star c-sidemenu-rating__star--love c-sidemenu-rating__star--num-3">
+                                <span class="c-sidemenu-rating__star__text-item">星3つ</span>
+                            </p>
+                        </div>
+                        <div class="c-sidemenu-rating__row u-flex-h u-flex-v--center">
+                            <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_gold.png" alt="金運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                            <p class="c-sidemenu-rating__star c-sidemenu-rating__star--gold c-sidemenu-rating__star--num-1">
+                                <span class="c-sidemenu-rating__star__text-item">星3つ</span>
+                            </p>
+                        </div>
+                        <p class="c-sidemenu-rating__detail u-right u-mtl4"><a class="c-sidemenu-rating__detail__link-item u-fs-normal" href="#">詳細を見る</a></p>
+                    </div>
+                </div>
+                <nav class="c-sidemenu-topnav">
+                    <ul class="c-sidemenu-topnav-list">
+                        <li class="c-sidemenu-topnav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-topnav-list__link-item c-sidemenu-topnav-list__link-item--top" href="#"><span class="c-sidemenu-topnav-list__text-item">TOP</span></a>
+                        </li><li class="c-sidemenu-topnav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-topnav-list__link-item c-sidemenu-topnav-list__link-item--mypage" href="#"><span class="c-sidemenu-topnav-list__text-item">マイページ</span></a>
+                        </li>
+                  </ul>
+                </nav>
+                <nav class="c-sidemenu-nav">
+                    <ul class="c-sidemenu-nav-list">
+                        <li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--list" href="#">占い師一覧</a>
+                        </li><li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--popular" href="#">人気占い師</a>
+                        </li><li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--new" href="#">新着占い</a>
+                        </li><li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--ranking" href="#">占いランキング</a>
+                        </li><li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--astro" href="#">12星座占い</a>
+                        </li><li class="c-sidemenu-nav-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--search" href="#">検索</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="c-sidemenu-word">
+                    <li class="c-sidemenu-word__list-item">
+                        <a class="c-sidemenu-word__link-item" href="#">
+                            <p class="c-sidemenu-word__text-item">人気ワード</p>
+                        </a>
+                    </li><li class="c-sidemenu-word__list-item">
+                        <a class="c-sidemenu-word__link-item" href="#">
+                            <p class="c-sidemenu-word__text-item">人気ワード</p>
+                        </a>
+                    </li><li class="c-sidemenu-word__list-item">
+                        <a class="c-sidemenu-word__link-item" href="#">
+                            <p class="c-sidemenu-word__text-item">人気ワード</p>
+                        </a>
+                    </li><li class="c-sidemenu-word__list-item">
+                        <a class="c-sidemenu-word__link-item" href="#">
+                            <p class="c-sidemenu-word__text-item">人気ワード</p>
+                        </a>
+                    </li>
+                </ul>
+                <p class="u-phm u-pbl"><a href="#"><amp-img class="u-va-text-bottom" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/img_sidemenu_howto_bnr.png" width="260" height="57" alt="au占いってどんなサービス？"></amp-img></a></p>
+                <nav class="c-sidemenu-link">
+                    <ul class="c-sidemenu-link-list">
+                        <li class="c-sidemenu-link-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-link-list__link-item c-sidemenu-link-list__link-item--portal" href="#">au Webポータル</a>
+                        </li>
+                        <li class="c-sidemenu-link-list__list-item">
+                            <a class="c-sidemenu__link-item--has-icon c-sidemenu-link-list__link-item c-sidemenu-link-list__link-item--smartpass" href="#">au スマートパス</a>
+                        </li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </amp-sidebar>
+    <p class="c-sidemenu__close-button" on="tap:sidebar.close" role="button" tabindex="1">
+        <amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_sidemenu_close.png" width="20" height="20" alt="close sidebar"></amp-img>
+    </p>
+
+    <div id="c-fixed-sidemenu" class="c-sidemenu__menus">
+        <div>
+            <div class="c-sidemenu-astro">
+                <div class="c-sidemenu-summary">
+                    <h3 class="u-fs-xxlarge u-fw-bold u-color-blue">てんびん座</h3>
+                    <p class="u-fs-small u-color-blue">9/23～10/23</p>
+                    <div class="c-sidemenu-summary__img">
+                        <amp-img class="c-sidemenu-summary__img__rank" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/astro_rank_1.png" width="38" height="49" alt="1位"></amp-img>
+                        <amp-img class="c-sidemenu-summary__img__astro" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/astro/hrs_07_libra.png" width="100" height="80" alt=""></amp-img>
+                    </div>
+                </div>
+                <div class="c-sidemenu-rating">
+                    <div class="c-sidemenu-rating__row">
+                        <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_personal.png" alt="総合運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                        <p class="c-sidemenu-rating__star c-sidemenu-rating__star--personal c-sidemenu-rating__star--num-5">
+                            <span class="c-sidemenu-rating__star__text-item">星5つ</span>
+                        </p>
+                    </div>
+                    <div class="c-sidemenu-rating__row u-flex-h u-flex-v--center">
+                        <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_love.png" alt="恋愛運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                        <p class="c-sidemenu-rating__star c-sidemenu-rating__star--love c-sidemenu-rating__star--num-3">
+                            <span class="c-sidemenu-rating__star__text-item">星3つ</span>
+                        </p>
+                    </div>
+                    <div class="c-sidemenu-rating__row u-flex-h u-flex-v--center">
+                        <h5 class="c-sidemenu-rating__titile"><amp-img src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/label_sidemenu_gold.png" alt="金運" width="50" height="18" class="u-va-text-bottom"></amp-img></h5>
+                        <p class="c-sidemenu-rating__star c-sidemenu-rating__star--gold c-sidemenu-rating__star--num-1">
+                            <span class="c-sidemenu-rating__star__text-item">星3つ</span>
+                        </p>
+                    </div>
+                    <p class="c-sidemenu-rating__detail u-right u-mtl4"><a class="c-sidemenu-rating__detail__link-item u-fs-normal" href="#">詳細を見る</a></p>
+                </div>
+            </div>
+            <nav class="c-sidemenu-topnav">
+                <ul class="c-sidemenu-topnav-list">
+                    <li class="c-sidemenu-topnav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-topnav-list__link-item c-sidemenu-topnav-list__link-item--top" href="#"><span class="c-sidemenu-topnav-list__text-item">TOP</span></a>
+                    </li><li class="c-sidemenu-topnav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-topnav-list__link-item c-sidemenu-topnav-list__link-item--mypage" href="#"><span class="c-sidemenu-topnav-list__text-item">マイページ</span></a>
+                    </li>
+              </ul>
+            </nav>
+            <nav class="c-sidemenu-nav">
+                <ul class="c-sidemenu-nav-list">
+                    <li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--list" href="#">占い師一覧</a>
+                    </li><li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--popular" href="#">人気占い師</a>
+                    </li><li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--new" href="#">新着占い</a>
+                    </li><li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--ranking" href="#">占いランキング</a>
+                    </li><li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--astro" href="#">12星座占い</a>
+                    </li><li class="c-sidemenu-nav-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-nav-list__link-item c-sidemenu-nav-list__link-item--search" href="#">検索</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="c-sidemenu-word">
+                <li class="c-sidemenu-word__list-item">
+                    <a class="c-sidemenu-word__link-item" href="#">
+                        <p class="c-sidemenu-word__text-item">人気ワード</p>
+                    </a>
+                </li><li class="c-sidemenu-word__list-item">
+                    <a class="c-sidemenu-word__link-item" href="#">
+                        <p class="c-sidemenu-word__text-item">人気ワード</p>
+                    </a>
+                </li><li class="c-sidemenu-word__list-item">
+                    <a class="c-sidemenu-word__link-item" href="#">
+                        <p class="c-sidemenu-word__text-item">人気ワード</p>
+                    </a>
+                </li><li class="c-sidemenu-word__list-item">
+                    <a class="c-sidemenu-word__link-item" href="#">
+                        <p class="c-sidemenu-word__text-item">人気ワード</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="u-phm u-pbl"><a href="#"><amp-img class="u-va-text-bottom" src="//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/img_sidemenu_howto_bnr.png" width="260" height="57" alt="au占いってどんなサービス？"></amp-img></a></p>
+            <nav class="c-sidemenu-link">
+                <ul class="c-sidemenu-link-list">
+                    <li class="c-sidemenu-link-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-link-list__link-item c-sidemenu-link-list__link-item--portal" href="#">au Webポータル</a>
+                    </li>
+                    <li class="c-sidemenu-link-list__list-item">
+                        <a class="c-sidemenu__link-item--has-icon c-sidemenu-link-list__link-item c-sidemenu-link-list__link-item--smartpass" href="#">au スマートパス</a>
+                    </li>
+              </ul>
+            </nav>
+        </div>
     </div>
-</header>
 
 <nav class="l-global-nav">
     <ul class="l-global-nav-list">
