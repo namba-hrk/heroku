@@ -19,7 +19,9 @@ body{font-family:sans-serif;background:#fff;color:#333;font-size:14px;text-size-
 .u-mbl4{margin-bottom:30px;}
 .u-mhm{margin-left:10px;margin-right:10px;}
 .u-mhl{margin-left:15px;margin-right:15px;}
+.u-mhl2{margin-left:20px;margin-right:20px;}
 .u-mhl3{margin-left:25px;margin-right:25px;}
+.u-mrs{margin-right:5px;}
 .u-mrm{margin-right:10px;}
 .u-right{text-align:right;}
 .u-va-bottom{vertical-align:bottom;}
@@ -27,12 +29,15 @@ body{font-family:sans-serif;background:#fff;color:#333;font-size:14px;text-size-
 .u-flex-h{display:flex;}
 .u-flex-v--center{align-items:center;}
 .u-flex--fill{-webkit-box-flex:1;flex-grow:1;}
+.u-flex-h--start{-webkit-box-align:start;align-items:flex-start;}
+.u-flex-v--end{-webkit-box-align:end;align-items:flex-end;}
 .u-ps{padding:5px;}
 .u-pm{padding:10px;}
 .u-phm{padding-left:10px;padding-right:10px;}
 .u-pvm{padding-top:10px;padding-bottom:10px;}
 .u-pbs{padding-bottom:5px;}
 .u-prs{padding-right:5px;}
+.u-prl{padding-right:15px;}
 .u-plm{padding-left:10px;}
 .u-phl{padding-left:15px;padding-right:15px;}
 .u-fs-large, .u-fs-normal, .u-fs-small, .u-fs-xlarge, .u-fs-xsmall, .u-fs-xxlarge{line-height:1.4;}
@@ -43,6 +48,11 @@ body{font-family:sans-serif;background:#fff;color:#333;font-size:14px;text-size-
 .u-fw-bold{font-weight:700;}
 .u-color-gray{color:#7a7f87;}
 .u-color-blue{color:#024b87;}
+.u-bg-lightblue{background:#e1eaff;}
+.u-bg-white{background:#fff;}
+.u-brm{border-radius:5px;}
+.u-nowrap{white-space:nowrap;}
+.u-pos-relative{position:relative;}
 .c-flat-button--blue{background:#e0eafc;}
 .c-flat-button--red{background:#fcdede;}
 .c-flat-button--pink{background:#fbe8ed;}
@@ -181,6 +191,43 @@ amp-selector [option][selected]{outline:none;}
 .c-category-list__list-item:nth-child(3n+3){width:33%;padding-left:2px;}
 .c-category-list__link-item{padding:3px;display:block;background:#e1eaff;}
 .c-category-list__text-item{height:30px;display:flex;align-items:center;justify-content:center;background:#e1eaff;border:1px solid #fff;font-size:13px;font-weight:700;border-radius:3px;}
+.p-otameshi-message{padding:10px;position:relative;background:#fff;border:1px solid #ccc;border-radius:5px;}
+.p-otameshi-message::after,
+.p-otameshi-message::before{right:100%;top:50%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+.p-otameshi-message::before{border-color:rgba(204,204,204,0);border-right-color:#ccc;border-width:9px;margin-top:-9px;}
+.p-otameshi-message::after{border-color:rgba(255,255,255,0);border-right-color:#fff;border-width:8px;margin-top:-8px;}
+.p-otameshi-message__text-item{font-weight:700;color:#024b87;font-size:12px;line-height:17px;text-align:center;}
+.c-list-menu__text-item{margin:3px 0 8px;font-size:15px;line-height:1.3;color:#001b5a;}
+.u-line-clamp{display:block;overflow:hidden;text-overflow:ellipsis;}
+.u-line-clamp--2,
+.u-line-clamp--3{display:-webkit-box;flex-direction:column;}
+.u-line-clamp--2{line-clamp:2;-webkit-line-clamp:2;box-orient:vertical;-webkit-box-orient:vertica;}
+.c-label-flame--purple{border:1px solid #bc8de8;}
+.c-label-flame--grey{border:1px solid #ccc;}
+.c-label-flame{display:inline-block;padding:4px;border-radius:3px;line-height:11px;background:#fff;}
+.c-label-flame,
+.c-label-text{font-size:11px;}
+.p-name-input{display:flex;}
+.p-name-input__title__text-item{display:block;width:35px;height:38px;line-height:38px;font-size:14px;font-weight:700;color:#024b87;}
+.p-name-input__input{-webkit-box-flex:1;flex-grow:1;}
+.c-form-list__list-item,
+.c-input-text{width:100%;}
+.c-input-text{display:block;margin-bottom:3px;padding:0 6px;box-sizing:border-box;font-size:15px;line-height:38px;border:none;border-bottom:1px solid #024b87;-webkit-appearance:none;border-radius:0;}
+.c-select-box{position:relative;}
+.p-input-profile-month,
+.p-input-profile-year{display:block;margin-right:10px;}
+.p-input-profile-year{width:40%;box-sizing:border-box;}
+.p-input-profile-month{width:30%;box-sizing:border-box;}
+.p-input-profile-day{display:block;width:30%;box-sizing:border-box;}
+.c-checkbox,
+.c-select-box__select-item{-webkit-appearance:none;background:0 0;}
+.c-select-box__select-item{width:100%;margin-bottom:3px;padding:0 6px;border-radius:0;border:none;border-bottom:1px solid #024b87;line-height:38px;font-size:15px;}
+.c-select-box::before{display:block;content:" ";width:10px;height:7px;position:absolute;right:2px;top:17px;background:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/icon_arrow_mustard_bottom.png);background-size:10px auto;}
+.p-input-profile-bloodtype,
+.p-input-profile-gender,
+.p-input-profile-minutes,
+.p-input-profile-state{width:50%;box-sizing:border-box;}
+.c-flat-button--button{width:100%;}
 .ft-pagetop_return{width:auto;display:block;margin-bottom:0;position:relative;padding-right:10px;text-indent:-9999px;white-space:nowrap;height:78px;margin-top:30px;}
 .ft-pagetop_return .ft-pagetop_return_touch{width:55px;height:78px;background-image:url(//cdn.stg.vie.auone.jp/asset/ft-market/sp/img/common/btn_pagetop_christmas.png);background-size:55px auto;position:absolute;right:9px;top:0;}
 .c-footer-nav{padding:5px;background:#e0e0e0;}
@@ -212,6 +259,7 @@ body{width:calc(100vw - 280px);}
 <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
 <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 <!--<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>-->
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script>
 <script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script>
 <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
@@ -684,6 +732,224 @@ body{width:calc(100vw - 280px);}
         </div>
     </div>
 </amp-selector>
+
+<h2 class="c-section-heading u-mbm">
+    <span class="c-section-heading__text-item">うお座にオススメの占い</span>
+</h2>
+
+<div class="u-flex-h u-flex-v--end u-pm">
+    <div class="u-prl">
+        <amp-img src="//cdn.vie.auone.jp/asset/ft-market/sp/img/common/chara_fuku.png" width="45" height="63"></amp-img>
+    </div>
+    <div class="u-flex--fill">
+        <div class="p-otameshi-message">
+            <p class="p-otameshi-message__text-item">フォームに必要項目を入力すると<br>無料で鑑定の一部がためせます。<br>お気に入りの占いに出会えるかも？</p>
+        </div>
+    </div>
+</div>
+
+<div class="u-mbs u-ps u-bg-lightblue">
+    <div class="u-pm u-brm u-bg-white">
+        <div class="u-flex-h u-flex-h--end">
+            <div class="u-flex--fill u-mrs">
+                <a href="https://sp.fortune.auone.jp/menu/top/REN00001412">
+                    <span class="c-list-menu__text-item u-line-clamp u-line-clamp--2 u-color-link-deep-blue">噂続出『結婚ならこの占い』凄技成就占◆あなたの結婚相手と入籍・幸</span>
+                </a>
+            </div>
+            <div class="c-list-menu__thumbnail">
+                <a href="https://sp.fortune.auone.jp/menu/top/REN00001412">
+                    <amp-img src="https://cdn.vie.auone.jp/cms/sp/fortune/ren/REN_ren_01_140_140.jpg" alt="" width="44" height="44" class="u-brm"></amp-img>
+                </a>
+            </div>
+        </div>
+        <div class="u-flex-h u-flex-h--start">
+            <a href="https://sp.fortune.auone.jp/search/list?search_type=CATEGORY&amp;search_word=7" class="c-label-flame c-label-flame--purple u-nowrap u-mrs">結婚全般</a>
+            <a href="https://sp.fortune.auone.jp/program/top/REN_ren_01/pay" class="c-label-flame c-label-flame--grey u-line-clamp u-line-clamp--1">Ren</a>
+        </div>
+    </div>
+</div>
+
+<form class="js-mypage_list u-pos-relative" action="https://sp.fortune.auone.jp/menu/somefree/edit/REN00001412" method="GET" target="_top">
+    <input type="hidden" name="_csrf" value="QVctY05oM3QMB35VJxJJTQxkak5jHgNFORV9EhE.AyQKBUsNOhxYGA==">
+    <input type="hidden" name="flashKey" value="astro/result_Mn-ycQoHC6_NrEwF0T7SwsV5e-rJovej">
+    <div class="u-mbl2">
+        <div class="u-mbl">
+            <div class="u-mhl2 u-mbs">
+                <dl class="p-name-input">
+                    <dt class="p-name-input__title">
+                        <span class="p-name-input__title__text-item">せい</span>
+                    </dt>
+                    <dd class="p-name-input__input">
+                        <input type="text" class="c-input-text js-input-validation" placeholder="うんせい" maxlength="12" data-formtype="name-sei-hiragana" value="" name="PUserProfile[last_name_kana]">
+                    </dd>
+                </dl>
+                <dl class="p-name-input">
+                    <dt class="p-name-input__title">
+                        <span class="p-name-input__title__text-item">めい</span>
+                    </dt>
+                    <dd class="p-name-input__input">
+                        <input type="text" class="c-input-text js-input-validation" placeholder="はなこ" maxlength="12" data-formtype="name-mei-hiragana" value="" name="PUserProfile[first_name_kana]">
+                    </dd>
+                </dl>
+            </div>
+            <div class="u-mhl2 u-mbm">
+                <div class="u-flex-h">
+                    <div class="c-select-box p-input-profile-year">
+                        <select id="birth_date0" class="c-select-box__select-item js-select-validation" name="PUserProfile[year]" data-formtype="birth-day">
+                            <option value="" selected="">年</option>
+                            <option value="1940">1940年</option>
+                            <option value="1941">1941年</option>
+                            <option value="1942">1942年</option>
+                            <option value="1943">1943年</option>
+                            <option value="1944">1944年</option>
+                            <option value="1945">1945年</option>
+                            <option value="1946">1946年</option>
+                            <option value="1947">1947年</option>
+                            <option value="1948">1948年</option>
+                            <option value="1949">1949年</option>
+                            <option value="1950">1950年</option>
+                            <option value="1951">1951年</option>
+                            <option value="1952">1952年</option>
+                            <option value="1953">1953年</option>
+                            <option value="1954">1954年</option>
+                            <option value="1955">1955年</option>
+                            <option value="1956">1956年</option>
+                            <option value="1957">1957年</option>
+                            <option value="1958">1958年</option>
+                            <option value="1959">1959年</option>
+                            <option value="1960">1960年</option>
+                            <option value="1961">1961年</option>
+                            <option value="1962">1962年</option>
+                            <option value="1963">1963年</option>
+                            <option value="1964">1964年</option>
+                            <option value="1965">1965年</option>
+                            <option value="1966">1966年</option>
+                            <option value="1967">1967年</option>
+                            <option value="1968">1968年</option>
+                            <option value="1969">1969年</option>
+                            <option value="1970">1970年</option>
+                            <option value="1971">1971年</option>
+                            <option value="1972">1972年</option>
+                            <option value="1973">1973年</option>
+                            <option value="1974">1974年</option>
+                            <option value="1975">1975年</option>
+                            <option value="1976">1976年</option>
+                            <option value="1977">1977年</option>
+                            <option value="1978">1978年</option>
+                            <option value="1979">1979年</option>
+                            <option value="1980">1980年</option>
+                            <option value="1981">1981年</option>
+                            <option value="1982">1982年</option>
+                            <option value="1983">1983年</option>
+                            <option value="1984">1984年</option>
+                            <option value="1985">1985年</option>
+                            <option value="1986">1986年</option>
+                            <option value="1987">1987年</option>
+                            <option value="1988">1988年</option>
+                            <option value="1989">1989年</option>
+                            <option value="1990">1990年</option>
+                            <option value="1991">1991年</option>
+                            <option value="1992">1992年</option>
+                            <option value="1993">1993年</option>
+                            <option value="1994">1994年</option>
+                            <option value="1995">1995年</option>
+                            <option value="1996">1996年</option>
+                            <option value="1997">1997年</option>
+                            <option value="1998">1998年</option>
+                            <option value="1999">1999年</option>
+                            <option value="2000">2000年</option>
+                            <option value="2001">2001年</option>
+                            <option value="2002">2002年</option>
+                            <option value="2003">2003年</option>
+                            <option value="2004">2004年</option>
+                            <option value="2005">2005年</option>
+                            <option value="2006">2006年</option>
+                            <option value="2007">2007年</option>
+                            <option value="2008">2008年</option>
+                            <option value="2009">2009年</option>
+                            <option value="2010">2010年</option>
+                            <option value="2011">2011年</option>
+                            <option value="2012">2012年</option>
+                            <option value="2013">2013年</option>
+                            <option value="2014">2014年</option>
+                            <option value="2015">2015年</option>
+                            <option value="2016">2016年</option>
+                            <option value="2017">2017年</option>
+                            <option value="2018">2018年</option>
+                        </select>
+                    </div>
+                    <div class="c-select-box p-input-profile-month">
+                        <select id="birth_date1" class="c-select-box__select-item js-select-validation" name="PUserProfile[month]" data-formtype="birth-day">
+                            <option value="" selected="">月</option>
+                            <option value="01">1月</option>
+                            <option value="02">2月</option>
+                            <option value="03">3月</option>
+                            <option value="04">4月</option>
+                            <option value="05">5月</option>
+                            <option value="06">6月</option>
+                            <option value="07">7月</option>
+                            <option value="08">8月</option>
+                            <option value="09">9月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </div>
+                    <div class="c-select-box p-input-profile-day">
+                        <select id="birth_date2" class="c-select-box__select-item js-select-validation" name="PUserProfile[date]" data-formtype="birth-day">
+                            <option value="" selected="">日</option>
+                            <option value="01">1日</option>
+                            <option value="02">2日</option>
+                            <option value="03">3日</option>
+                            <option value="04">4日</option>
+                            <option value="05">5日</option>
+                            <option value="06">6日</option>
+                            <option value="07">7日</option>
+                            <option value="08">8日</option>
+                            <option value="09">9日</option>
+                            <option value="10">10日</option>
+                            <option value="11">11日</option>
+                            <option value="12">12日</option>
+                            <option value="13">13日</option>
+                            <option value="14">14日</option>
+                            <option value="15">15日</option>
+                            <option value="16">16日</option>
+                            <option value="17">17日</option>
+                            <option value="18">18日</option>
+                            <option value="19">19日</option>
+                            <option value="20">20日</option>
+                            <option value="21">21日</option>
+                            <option value="22">22日</option>
+                            <option value="23">23日</option>
+                            <option value="24">24日</option>
+                            <option value="25">25日</option>
+                            <option value="26">26日</option>
+                            <option value="27">27日</option>
+                            <option value="28">28日</option>
+                            <option value="29">29日</option>
+                            <option value="30">30日</option>
+                            <option value="31">31日</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="u-mhl2 u-mbm">
+                <div class="c-select-box p-input-profile-gender">
+                    <select class="c-select-box__select-item" name="PUserProfile[gender]">
+                        <option value="" selected="">性別</option>
+                        <option value="0">男性</option>
+                        <option value="1">女性</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="u-mhl u-mbm">
+            <button type="submit" name="job_type" value="complete" class="c-flat-button c-flat-button--button c-flat-button--blue c-flat-button--has-arrow">
+                <span class="c-f-button__text-item">占ってみる（無料）</span>
+            </button>
+        </div>
+    </div>
+</form>
 
 <h2 class="c-section-heading u-mbm">
     <span class="c-section-heading__text-item">急上昇ワード</span>
